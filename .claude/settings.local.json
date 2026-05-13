@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --version)",
+      "Bash(start python *)",
+      "Bash(dir uploads *)",
+      "Bash(forfiles /p uploads /c \"cmd /c echo @fname @fsize\")",
+      "Bash(curl -sL \"https://unpkg.com/react@18.3.1/umd/react.production.min.js\")",
+      "Bash(openssl dgst *)",
+      "Bash(openssl base64 *)",
+      "Bash(curl -sL \"https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js\")",
+      "Bash(git push *)",
+      "Bash(timeout 30)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git config *)",
+      "Bash(Test-Path \"c:\\\\Users\\\\lucas\\\\Desktop\\\\Claude\\\\sites\\\\jp-personal\\\\project\\\\.git\")",
+      "Bash(rm -rf \"c:\\\\Users\\\\lucas\\\\Desktop\\\\Claude\\\\sites\\\\jp-personal\\\\project\\\\.git\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\lucas\\Desktop\\Claude\\sites\\jp-personal\\project\\.git"
+    ]
+  }
+}
