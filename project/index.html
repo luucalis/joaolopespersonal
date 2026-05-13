@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="--orange: #FF6A00; --yellow: #FFC300;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>João Lopes · Personal Trainer · Blumenau SC</title>
+  <meta name="description" content="Personal Trainer em Blumenau SC. Treinamento personalizado presencial na Panobianco e Selfit, consultoria online. Faixa preta em Jiu-Jitsu, +20 anos de experiência e +100 alunos transformados.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="João Lopes">
+  <meta name="keywords" content="personal trainer blumenau, treinamento personalizado blumenau, consultoria fitness online, academia blumenau, panobianco blumenau, selfit blumenau, personal sc">
+  <meta name="geo.region" content="BR-SC">
+  <meta name="geo.placename" content="Blumenau">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <!-- TODO: atualize com seu domínio real -->
+  <link rel="canonical" href="https://joaolopes-personal.vercel.app">
+
+  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://joaolopes-personal.vercel.app">
+  <meta property="og:title" content="João Lopes · Personal Trainer · Blumenau SC">
+  <meta property="og:description" content="Treinamento personalizado presencial na Panobianco e Selfit, consultoria online em Blumenau. Faixa preta, método direto, resultado real.">
+  <!-- TODO: atualize og:image com URL absoluta do seu domínio -->
+  <meta property="og:image" content="https://joaolopes-personal.vercel.app/assets/hero.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="JP Personal Trainer">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="João Lopes · Personal Trainer · Blumenau SC">
+  <meta name="twitter:description" content="Treinamento personalizado presencial e consultoria online em Blumenau. Faixa preta, método direto, resultado real.">
+  <meta name="twitter:image" content="https://joaolopes-personal.vercel.app/assets/hero.webp">
+
+  <!-- Schema.org JSON-LD — negócio local + pessoa -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://joaolopes-personal.vercel.app/#joao-lopes",
+        "name": "João Lopes",
+        "jobTitle": "Personal Trainer",
+        "description": "Personal Trainer e Faixa Preta em Jiu-Jitsu com mais de 20 anos no esporte, especializado em treinamento personalizado presencial (Panobianco e Selfit) e consultoria online em Blumenau SC.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Blumenau",
+          "addressRegion": "SC",
+          "addressCountry": "BR"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://joaolopes-personal.vercel.app/#negocio",
+        "name": "João Lopes Personal Trainer",
+        "description": "Treinamento personalizado presencial na Panobianco e Selfit, consultoria online em Blumenau SC. Faixa preta, mais de 100 alunos transformados.",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Panobianco",
+          "addressLocality": "Blumenau",
+          "addressRegion": "SC",
+          "addressCountry": "BR"
+        },
+        "telephone": "+5547999934510",
+        "url": "https://joaolopes-personal.vercel.app",
+        "employee": { "@id": "https://joaolopes-personal.vercel.app/#joao-lopes" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços de Personal Trainer",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Treino Presencial",
+                "description": "Treino guiado, presencial, com correção em tempo real na Panobianco Blumenau. Programação periodizada para evolução constante."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Consultoria Online",
+                "description": "Treino estruturado para sua rotina com acompanhamento à distância. Ajustes semanais e suporte direto via WhatsApp."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Performance: pré-conectar ao CDN e pré-carregar recursos críticos -->
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preload" href="assets/Oswald.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/hero.webp" as="image" media="(min-width: 721px)">
+  <link rel="preload" href="uploads/hero-celular.webp" as="image" media="(max-width: 720px)">
+
+  <link rel="icon" href="uploads/logo.webp">
+  <link rel="apple-touch-icon" href="uploads/logo.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous" defer></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous" defer></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous" defer></script>
+  <script type="text/babel">
+// App.jsx is loaded by Babel standalone in the browser.
+// React is available globally via the CDN scripts in index.html.
+
+const { useState, useEffect, useRef } = React;
+
+/* ───────── Icons ───────── */
+const IconCheck = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="url(#cg)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <defs>
+      <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#FF6A00"/>
+        <stop offset="100%" stopColor="#FFC300"/>
+      </linearGradient>
+    </defs>
+    <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+);
+
+const IconInstagram = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+  </svg>
+);
+
+const IconWhatsapp = ({ size = 22, color = "currentColor" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.296-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+);
+
+const IconArrow = ({ size = 14 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="5" y1="12" x2="19" y2="12"></line>
+    <polyline points="12 5 19 12 12 19"></polyline>
+  </svg>
+);
+
+const IconDumbbell = ({ size = 28 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6.5 6.5L17.5 17.5"/>
+    <path d="M21 21l-1-1"/>
+    <path d="M3 3l1 1"/>
+    <path d="M18 22l4-4"/>
+    <path d="M2 6l4-4"/>
+    <path d="M3 10l7-7"/>
+    <path d="M14 21l7-7"/>
+  </svg>
+);
+
+const IconLaptop = ({ size = 28 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="4" width="18" height="12" rx="1"/>
+    <path d="M2 20h20"/>
+    <path d="M9 11l2 2 4-4"/>
+  </svg>
+);
+
+const IconShield = ({ size = 28 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    <path d="M9 12l2 2 4-4"/>
+  </svg>
+);
+
+const IconPin = ({ size = 14 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </svg>
+);
+
+/* ───────── Reveal hook ───────── */
+function useReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+}
+
+/* ───────── WhatsApp link helper ───────── */
+const WA_NUMBER = "5547999934510";
+const IG_URL = "https://www.instagram.com/joaolopes_treinador";
+function waLink(msg = "Olá João! Vim pelo site e quero começar agora.") {
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+/* ───────── Nav ───────── */
+function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 30);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return (
+    <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
+      <a href="#top" className="nav-logo">
+        <img src="uploads/logo.webp" alt="JP" />
+        <div>
+          <div className="name">João Lopes <span>/ Personal</span></div>
+        </div>
+      </a>
+      <div className="nav-links">
+        <a href="#metodo">Método</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#locais">Locais</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#depoimentos">Depoimentos</a>
+      </div>
+      <div className="nav-actions">
+        <a href={IG_URL} target="_blank" rel="noopener" className="nav-ig" aria-label="Instagram">
+          <IconInstagram size={18} />
+        </a>
+        <a href={waLink()} target="_blank" rel="noopener" className="nav-cta">
+          <IconWhatsapp size={14} /> WhatsApp
+        </a>
+      </div>
+    </nav>
+  );
+}
+
+/* ───────── Hero ───────── */
+function Hero({ headlineVariant = "default", heroImage = "assets/hero.webp" }) {
+  const headlines = {
+    default: (
+      <>TRANSFORME<br/>SEU CORPO COM<br/><span className="accent">DISCIPLINA</span> E <span className="accent">MÉTODO</span></>
+    ),
+    short: (
+      <>FORÇA.<br/>FOCO.<br/><span className="accent">RESULTADO.</span></>
+    ),
+    challenge: (
+      <>DEIXE DE SER<br/>QUEM TE LIMITA.<br/><span className="accent">COMECE HOJE.</span></>
+    ),
+  };
+  return (
+    <section className="hero" id="top">
+      <div className="hero-bg" style={{backgroundImage: `url(${heroImage})`}}></div>
+      <div className="hero-bg" style={{position: "absolute", inset: 0}}>
+        <div className="hero-grain"></div>
+      </div>
+      <div className="hero-text-shield"></div>
+      <div className="hero-content">
+        <div className="reveal in">
+          <span className="hero-eyebrow eyebrow">Personal Trainer · Blumenau</span>
+        </div>
+        <h1 className="display reveal in delay-1">{headlines[headlineVariant] || headlines.default}</h1>
+        <p className="hero-sub reveal in delay-2">
+          Treinamento personalizado presencial na Panobianco e Selfit, e consultoria online de onde você estiver. Método direto, sem atalhos, com acompanhamento próximo.
+        </p>
+        <ul className="hero-bullets reveal in delay-3">
+          <li><IconCheck/> Treino presencial na Panobianco e Selfit</li>
+          <li><IconCheck/> Acompanhamento contínuo e personalizado</li>
+          <li><IconCheck/> Consultoria online de qualquer lugar</li>
+        </ul>
+        <div className="hero-cta-row reveal in delay-4">
+          <a className="btn-whatsapp" href={waLink("Olá João! Vim pelo site e quero começar agora.")} target="_blank" rel="noopener">
+            <IconWhatsapp/> Quero começar agora
+          </a>
+          <a className="btn-ghost" href="#metodo">Ver método <IconArrow/></a>
+        </div>
+        <div className="microcopy reveal in delay-4">
+          Sem compromisso<span className="dot">•</span>Resposta rápida<span className="dot">•</span>Vagas limitadas
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Stats strip ───────── */
+function StatsStrip() {
+  const stats = [
+    { num: "+20", label: "Anos de Esporte" },
+    { num: "+100", label: "Alunos Transformados" },
+    { num: "Faixa Preta", label: "Jiu-Jitsu" },
+    { num: "100%", label: "Foco em Resultado" },
+  ];
+  return (
+    <section className="stats-strip">
+      <div className="container">
+        <div className="stats">
+          {stats.map((s, i) => (
+            <div className="stat reveal" style={{transitionDelay: `${i * 0.06}s`}} key={i}>
+              <div className="num">{s.num}</div>
+              <div className="label">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Services ───────── */
+function Services() {
+  const services = [
+    {
+      n: "01",
+      icon: <IconDumbbell/>,
+      title: "Treino Presencial",
+      desc: "Treino guiado, presencial, com correção em tempo real. Programação periodizada para evolução constante — força, condicionamento e estética.",
+      meta: <><IconPin/> Panobianco e Selfit · Blumenau</>,
+    },
+    {
+      n: "02",
+      icon: <IconLaptop/>,
+      title: "Consultoria Online",
+      desc: "Treino estruturado para sua rotina, com acompanhamento à distância. Ajustes semanais, suporte direto e métricas claras de progresso.",
+      meta: <>Suporte remoto · acompanhamento diário</>,
+    },
+  ];
+  return (
+    <section className="section-pad" id="metodo">
+      <div className="container">
+        <div className="section-head reveal">
+          <span className="eyebrow">O Método</span>
+          <h2 className="display">Dois caminhos. Um único compromisso: <span className="text-grad">resultado.</span></h2>
+        </div>
+        <div className="services-grid">
+          {services.map((s, i) => (
+            <div className="service-card reveal" style={{transitionDelay: `${i * 0.08}s`}} key={i}>
+              <div className="service-num">{s.n}</div>
+              <div className="service-icon">{s.icon}</div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+              <div className="meta">{s.meta}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Results — Before/After slider ───────── */
+function BeforeAfter({ before, after, name, desc, singleImage, isFirst }) {
+  const isSingle = Boolean(singleImage);
+  const ref = useRef(null);
+  const [pos, setPos] = useState(50);
+  const draggingRef = useRef(false);
+
+  const onMove = (clientX) => {
+    if (!ref.current) return;
+    const r = ref.current.getBoundingClientRect();
+    const x = Math.max(0, Math.min(r.width, clientX - r.left));
+    setPos((x / r.width) * 100);
+  };
+
+  useEffect(() => {
+    const move = (e) => {
+      if (!draggingRef.current) return;
+      const cx = e.touches ? e.touches[0].clientX : e.clientX;
+      onMove(cx);
+    };
+    const up = () => { draggingRef.current = false; };
+    window.addEventListener("mousemove", move);
+    window.addEventListener("touchmove", move, { passive: true });
+    window.addEventListener("mouseup", up);
+    window.addEventListener("touchend", up);
+    return () => {
+      window.removeEventListener("mousemove", move);
+      window.removeEventListener("touchmove", move);
+      window.removeEventListener("mouseup", up);
+      window.removeEventListener("touchend", up);
+    };
+  }, []);
+
+  const start = (e) => {
+    if (isSingle) return;
+    draggingRef.current = true;
+    const cx = e.touches ? e.touches[0].clientX : e.clientX;
+    onMove(cx);
+  };
+
+  if (isSingle) {
+    return (
+      <div className="result-card reveal single-card" ref={ref}>
+        <img className="single-img" src={singleImage} alt={name} loading="lazy" decoding="async" />
+        <div className="ba-foot">
+          <div className="name">{name}</div>
+          <div className="desc">{desc}</div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className={`result-card reveal${isFirst ? " first-card" : ""}`}
+      ref={ref}
+      style={{ "--clip": `${100 - pos}%`, "--handle": `${pos}%` }}
+      onMouseDown={start}
+      onTouchStart={start}
+    >
+      <div className="ba-img ba-after" style={{backgroundImage: `url(${after})`}}></div>
+      <div className="ba-img ba-before" style={{backgroundImage: `url(${before})`}}></div>
+      <span className="ba-label before">Antes</span>
+      <span className="ba-label after">Depois</span>
+      <div className="ba-handle"></div>
+      <div className="ba-foot">
+        <div className="name">{name}</div>
+        <div className="desc">{desc}</div>
+      </div>
+    </div>
+  );
+}
+
+function Results() {
+  const items = [
+    { before: "uploads/antes-1.jpeg", after: "uploads/depois-1.jpeg", name: "Laura", desc: "5 meses · -7kg · Acompanhamento presencial" },
+    { singleImage: "uploads/depois-2.jpeg", name: "Eduarda Cunha", desc: "2 anos · Consultoria online · Consultoria de performance no Jiu-jitsu" },
+    { singleImage: "uploads/depois-3.webp", name: "Eloa Lopes", desc: "3 anos · Acompanhamento presencial e performance de Jiu-jitsu" },
+  ];
+  return (
+    <section className="section-pad bg-band" id="resultados">
+      <div className="container">
+        <div className="section-head reveal">
+          <span className="eyebrow">Transformações</span>
+          <h2 className="display">Resultados que <span className="text-grad">falam por si.</span></h2>
+          <p style={{color: "var(--text-dim)", fontSize: "16px", marginTop: "16px", maxWidth: "52ch"}}>
+            Arraste para comparar. Cada aluno tem uma história — todas começaram com a mesma decisão: parar de adiar.
+          </p>
+        </div>
+        <div className="results-grid">
+          {items.map((it, i) => (
+            <BeforeAfter key={i} {...it} isFirst={i === 0} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Gyms ───────── */
+function Gyms() {
+  const panobiancoSrc = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3558.3804840059056!2d-49.0715009!3d-26.8914173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df1f45e85949a7%3A0xc24870fdf548f70!2sPanobianco!5e0!3m2!1spt-PT!2sbr!4v1778636467637!5m2!1spt-PT!2sbr";
+  const selfitSrc    = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3558.3804840059056!2d-49.0715009!3d-26.8914173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df1947d89eec63%3A0x75697e39494d706e!2sSelfit%20Academias%20Blumenau!5e0!3m2!1spt-PT!2sbr!4v1778636482508!5m2!1spt-PT!2sbr";
+
+  return (
+    <section className="section-pad gyms-section" id="locais">
+      <div className="container">
+
+        <div className="section-head reveal">
+          <span className="eyebrow">Acompanhamento Presencial</span>
+          <h2 className="display">Onde você vai <span className="text-grad">treinar comigo.</span></h2>
+        </div>
+
+        <div className="gyms-layout">
+
+          {/* ── Panobianco ── */}
+          <div className="gym-card reveal">
+            <div className="gym-watermark">
+              <img src="uploads/panobianco.svg" alt="" aria-hidden="true" />
+            </div>
+            <div className="gym-schedule">
+              <span className="gym-period">Manhã</span>
+              <span className="gym-period">Noite</span>
+            </div>
+            <div className="gym-logo-display">
+              <img src="uploads/panobianco.svg" alt="Panobianco" className="gym-logo-img" />
+            </div>
+            <p className="gym-desc">Treino presencial com programação periodizada, correção de execução em tempo real e acompanhamento próximo. Resultados consistentes para quem quer evoluir de verdade.</p>
+            <div className="gym-map-wrap">
+              <iframe
+                src={panobiancoSrc}
+                width="100%" height="200"
+                style={{border:0}} allowFullScreen="" loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Panobianco Blumenau"
+              ></iframe>
+            </div>
+            <a className="gym-cta" href={waLink("Olá João! Quero treinar presencialmente na Panobianco.")} target="_blank" rel="noopener">
+              <IconWhatsapp size={16}/> Quero treinar na Panobianco
+            </a>
+          </div>
+
+          {/* ── Foto João — centro ── */}
+          <div className="gym-photo-col reveal delay-1">
+            <div className="gym-photo-wrap">
+              <img src="uploads/personal.webp" alt="João Lopes Personal Trainer" loading="lazy" decoding="async" />
+              <div className="gym-photo-badge">
+                <div className="gym-photo-name">João Lopes</div>
+                <div className="gym-photo-sub">Personal Trainer · Blumenau SC</div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Selfit ── */}
+          <div className="gym-card reveal delay-2">
+            <div className="gym-watermark">
+              <img src="uploads/selfit.svg" alt="" aria-hidden="true" />
+            </div>
+            <div className="gym-schedule">
+              <span className="gym-period">Tarde</span>
+            </div>
+            <div className="gym-logo-display">
+              <img src="uploads/selfit.svg" alt="Selfit Academias" className="gym-logo-img" />
+            </div>
+            <p className="gym-desc">Acompanhamento presencial no período da tarde. Treino adaptado ao seu nível, estrutura de qualidade e foco total na sua evolução física.</p>
+            <div className="gym-map-wrap">
+              <iframe
+                src={selfitSrc}
+                width="100%" height="200"
+                style={{border:0}} allowFullScreen="" loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Selfit Academias Blumenau"
+              ></iframe>
+            </div>
+            <a className="gym-cta" href={waLink("Olá João! Quero treinar presencialmente na Selfit.")} target="_blank" rel="noopener">
+              <IconWhatsapp size={16}/> Quero treinar na Selfit
+            </a>
+          </div>
+
+        </div>
+
+        {/* ── Consultoria Online ── */}
+        <div className="online-section">
+          <div className="online-text reveal">
+            <span className="eyebrow">Consultoria Online</span>
+            <h3 className="display" style={{fontSize:"clamp(32px,4.5vw,56px)", marginTop:"18px", marginBottom:"20px"}}>
+              Não importa <span className="text-grad">onde você está.</span>
+            </h3>
+            <p style={{fontSize:"clamp(15px,1.4vw,17px)", color:"var(--text-dim)", lineHeight:1.65, maxWidth:"48ch", marginBottom:"32px"}}>
+              Para quem não está em Blumenau ou prefere treinar no seu ritmo — treino estruturado, acompanhamento semanal e suporte direto, de onde você estiver.
+            </p>
+            <div className="online-features">
+              {[
+                "Treino estruturado para sua rotina",
+                "Ajustes semanais personalizados",
+                "Suporte direto via WhatsApp",
+                "Acompanhamento de métricas e evolução",
+              ].map((f, i) => (
+                <div className="online-feature" key={i}>
+                  <IconCheck size={16}/> {f}
+                </div>
+              ))}
+            </div>
+            <a className="btn-whatsapp" href={waLink("Olá João! Quero saber sobre a consultoria online.")} target="_blank" rel="noopener" style={{marginTop:"36px", display:"inline-flex"}}>
+              <IconWhatsapp/> Quero consultoria online
+            </a>
+            <div className="online-tags" style={{marginTop:"28px"}}>
+              <div className="online-tags-track">
+                {["100% Remoto","Ajustes Semanais","App Incluso","Suporte Direto"].map((t,i) => (
+                  <span className="online-tag" key={i}>{t}</span>
+                ))}
+                {["100% Remoto","Ajustes Semanais","App Incluso","Suporte Direto"].map((t,i) => (
+                  <span className="online-tag online-tag-dupe" key={`d${i}`} aria-hidden="true">{t}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+/* ───────── About ───────── */
+function About() {
+  return (
+    <section className="section-pad" id="sobre">
+      <div className="container">
+        <div className="section-head reveal" style={{marginBottom: "48px"}}>
+          <span className="eyebrow">Quem te acompanha</span>
+          <h2 className="display">Quem vai te acompanhar nessa <span className="text-grad">transformação.</span></h2>
+        </div>
+        <div className="about-grid">
+          <div className="about-img-wrap reveal">
+            <img src="uploads/quemsoueu.webp" alt="João Lopes Personal Trainer Blumenau" loading="lazy" decoding="async" />
+            <div className="about-img-tag"><span className="accent">JP</span> · Personal Trainer · Blumenau SC</div>
+          </div>
+          <div className="about-text reveal delay-1">
+            <div className="about-name">João Lopes</div>
+            <div className="about-authority">"Faixa preta em Jiu-Jitsu e especialista em tirar pessoas do sedentarismo."</div>
+            <div className="about-body">
+              <p>Estou envolvido com o esporte desde os meus 6 anos de idade. Construí uma trajetória sólida no Jiu-Jitsu, conquistando títulos importantes ao longo dos anos e desenvolvendo uma mentalidade focada em disciplina, consistência e alta performance.</p>
+              <p>Durante essa jornada, entendi que a preparação física é um dos pilares fundamentais para qualquer resultado — seja no esporte ou na vida. Tive a oportunidade de aprender com grandes profissionais, o que me permitiu desenvolver um método eficiente, direto e baseado em prática real.</p>
+              <p>Hoje, aplico toda essa experiência para ajudar pessoas comuns a saírem do sedentarismo, evoluírem o físico e conquistarem resultados de verdade — com acompanhamento próximo, estratégia e sem atalhos.</p>
+              <p>Meu compromisso é simples: entregar <span style={{color: "rgb(255, 106, 0)"}}>resultado</span> com <span style={{color: "rgb(255, 79, 7)"}}>consistência</span>.</p>
+            </div>
+            <div className="about-creds">
+              <div className="cred accent">Faixa Preta · BJJ</div>
+              <div className="cred">+20 anos no esporte</div>
+              <div className="cred">+100 alunos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Testimonials ───────── */
+function WaCard({ item, delay = 0 }) {
+  return (
+    <div className="wa-card reveal" style={{transitionDelay: `${delay}s`}}>
+      <div className="wa-head">
+        <div className="wa-avatar">{item.name.charAt(0)}</div>
+        <div>
+          <div className="wa-name">{item.name}</div>
+          <div className="wa-status">{item.status}</div>
+        </div>
+      </div>
+      <div className="wa-body">
+        {item.msgs.map((m, j) => (
+          <div className={`wa-msg ${m.me ? "me" : ""}`} key={j}>
+            {m.t}
+            <div className="wa-time">{m.time} ✓✓</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Testimonials() {
+  const items = [
+    {
+      name: "Lucas M.", status: "online",
+      msgs: [
+        { t: "João, queria te agradecer pelo atendimento de hoje. Seriedade e atenção do início ao fim 🙏", time: "09:42", me: false },
+        { t: "Nunca tive um personal que se preocupasse tanto com cada detalhe do treino. Dá pra ver o profissionalismo em tudo.", time: "09:42", me: false },
+        { t: "Isso é o mínimo que você merece. Bora evoluir! 💪", time: "09:43", me: true },
+      ],
+    },
+    {
+      name: "Ana P.", status: "online",
+      msgs: [
+        { t: "Eu nunca tinha treinado na vida. Tinha medo de academia.", time: "18:12", me: false },
+        { t: "Hoje treino 4x por semana, evoluo todo dia e me sinto outra pessoa completamente.", time: "18:13", me: false },
+        { t: "Obrigada por nunca ter desistido de mim 🧡", time: "18:13", me: false },
+      ],
+    },
+    {
+      name: "Rafael C.", status: "online",
+      msgs: [
+        { t: "Coach, fiz o teste físico hoje", time: "07:21", me: false },
+        { t: "Supino subiu 25kg em 4 meses. Corrida 5km saiu de 32min pra 24min.", time: "07:22", me: false },
+        { t: "Sem milagre. Só método e consistência 🤝", time: "07:24", me: true },
+      ],
+    },
+  ];
+
+  const extended = [items[items.length - 1], ...items, items[0]];
+  const [pos, setPos] = useState(1);
+  const [anim, setAnim] = useState(true);
+  const [dot, setDot] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setAnim(true);
+      setPos(p => p + 1);
+    }, 4500);
+    return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    if (pos === extended.length - 1) {
+      setTimeout(() => { setAnim(false); setPos(1); }, 480);
+    } else if (pos === 0) {
+      setTimeout(() => { setAnim(false); setPos(items.length); }, 480);
+    }
+    const realIdx = ((pos - 1) % items.length + items.length) % items.length;
+    setDot(realIdx);
+  }, [pos]);
+
+  const prev = () => { setAnim(true); setPos(p => p - 1); };
+  const next = () => { setAnim(true); setPos(p => p + 1); };
+
+  const IconPrev = () => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+    </svg>
+  );
+  const IconNext = () => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+    </svg>
+  );
+
+  return (
+    <section className="section-pad bg-band" id="depoimentos">
+      <div className="container">
+        <div className="section-head reveal">
+          <span className="eyebrow">Depoimentos reais</span>
+          <h2 className="display">A transformação <span className="text-grad">não é exceção.</span> É padrão.</h2>
+        </div>
+
+        {/* Desktop: 3 cards estáticos */}
+        <div className="testimonials testimonials-desktop">
+          {items.map((it, i) => <WaCard key={i} item={it} delay={i * 0.08} />)}
+        </div>
+
+        {/* Mobile: carousel com botões */}
+        <div className="testimonials-mobile-wrap">
+          <div className="testimonials-wrap">
+            <button className="carousel-nav-btn" onClick={prev} aria-label="Anterior"><IconPrev/></button>
+
+            <div className="testimonials-carousel-inner">
+              <div
+                className="carousel-track"
+                style={{
+                  transform: `translateX(${-pos * 100}%)`,
+                  transition: anim ? "transform 0.48s cubic-bezier(0.25,0.46,0.45,0.94)" : "none",
+                }}
+              >
+                {extended.map((it, i) => (
+                  <div className="carousel-slide" key={i}>
+                    <WaCard item={it} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button className="carousel-nav-btn" onClick={next} aria-label="Próximo"><IconNext/></button>
+          </div>
+
+          <div className="carousel-dots">
+            {items.map((_, i) => (
+              <span key={i} className={`carousel-dot${dot === i ? " active" : ""}`} onClick={() => { setAnim(true); setPos(i + 1); }} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Diferenciais ───────── */
+function Diferenciais() {
+  const IconUser = () => (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+      <path d="M12 11v0"/>
+    </svg>
+  );
+  const IconChat = () => (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      <path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/>
+    </svg>
+  );
+  const IconBolt = () => (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+  );
+  const IconPhone = () => (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="6" y="2" width="12" height="20" rx="2"/>
+      <line x1="12" y1="18" x2="12" y2="18.01"/>
+      <path d="M9 6h6"/>
+    </svg>
+  );
+  const cards = [
+    { n: "01", icon: <IconUser/>, title: "Treino Personalizado", body: ["Nenhum treino genérico. Cada plano é construído com base no seu corpo, objetivo e rotina — pra você ter resultado de verdade, não resultado só no papel."] },
+    { n: "02", icon: <IconChat/>, title: "Acompanhamento Contínuo", body: ["Você não está sozinho. Suporte direto, ajustes semanais e acompanhamento constante para garantir evolução em cada fase do processo."] },
+    { n: "03", icon: <IconBolt/>, title: "Resultados Mais Rápidos", body: ["Com método validado e estratégia definida, você encurta o caminho. Sem tentativa e erro — direto ao que realmente funciona para o seu perfil."] },
+    { n: "04", icon: <IconPhone/>, title: "Aplicativo Incluso", body: [
+      "Acompanhe seu progresso em tempo real, sem precisar enviar planilhas ou prints.",
+      "Acesse vídeos com execução correta dos exercícios, visualize sua evolução e mantenha consistência com muito mais clareza e organização."
+    ]},
+  ];
+  return (
+    <section className="diff" id="diferenciais">
+      <div className="diff-bg" style={{backgroundImage: `url(assets/diferenciais.jpeg)`}}></div>
+      <div className="container diff-inner">
+        <div className="section-head reveal">
+          <span className="eyebrow">Diferenciais</span>
+          <h2 className="display">Por que treinar <span className="text-grad">comigo?</span></h2>
+        </div>
+        <div className="diff-grid">
+          {cards.map((c, i) => (
+            <div className="diff-card reveal" data-num={c.n} style={{transitionDelay: `${i * 0.06}s`}} key={i}>
+              <div className="diff-icon">{c.icon}</div>
+              <h3>{c.title}</h3>
+              {c.body.map((p, j) => <p key={j}>{p}</p>)}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Final CTA ───────── */
+function FinalCTA() {
+  return (
+    <section className="final-cta">
+      <div className="final-cta-bg"></div>
+      <div className="container final-cta-content">
+        <span className="eyebrow reveal">Última chamada</span>
+        <h2 className="display reveal" style={{marginTop: "18px"}}>
+          AGORA É SUA<br/>VEZ DE <span className="text-grad">MUDAR.</span>
+        </h2>
+        <p className="final-cta-sub reveal delay-1">Pare de adiar. Comece hoje.</p>
+        <div className="reveal delay-2">
+          <a className="btn-whatsapp" href={waLink("Olá João! Vim pelo site e decidi começar. Como funciona?")} target="_blank" rel="noopener" style={{fontSize: "18px", padding: "22px 36px"}}>
+            <IconWhatsapp size={24}/> Falar com o Personal no WhatsApp
+          </a>
+        </div>
+        <div className="reveal delay-3">
+          <div className="urgency"><span className="pulse"></span> Vagas limitadas para o mês</div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Footer ───────── */
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="container footer-grid">
+        <div className="footer-brand">
+          <img src="uploads/logo.webp" alt="JP" loading="lazy" />
+          <div>
+            <div className="name">João Lopes</div>
+            <div className="sub">Personal Trainer</div>
+          </div>
+        </div>
+        <div className="footer-loc"><IconPin/> Panobianco · Selfit · Blumenau SC</div>
+        <div className="footer-social">
+          <a href={IG_URL} target="_blank" rel="noopener" className="footer-ig" aria-label="Instagram">
+            <IconInstagram size={18} />
+            <span>Instagram</span>
+          </a>
+        </div>
+        <div className="footer-meta">© 2026 João Lopes · Todos os direitos reservados</div>
+      </div>
+    </footer>
+  );
+}
+
+/* ───────── Sticky buttons ───────── */
+function StickyWA() {
+  return (
+    <div className="sticky-btns">
+      <a className="sticky-ig" href={IG_URL} target="_blank" rel="noopener" aria-label="Instagram">
+        <IconInstagram size={24} />
+        <span className="sticky-wa-tip">Instagram</span>
+      </a>
+      <a className="sticky-wa" href={waLink()} target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <IconWhatsapp size={28} color="#0A0A0A"/>
+        <span className="sticky-wa-tip">Fale agora</span>
+      </a>
+    </div>
+  );
+}
+
+/* ───────── App ───────── */
+function App() {
+  useReveal();
+
+  return (
+    <>
+      <Nav />
+      <Hero />
+      <StatsStrip />
+      <Services />
+      <Results />
+      <Gyms />
+      <About />
+      <Testimonials />
+      <Diferenciais />
+      <FinalCTA />
+      <Footer />
+      <StickyWA />
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
