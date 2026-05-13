@@ -1,3 +1,4 @@
 {
-  "rootDirectory": "project"
+  "rootDirectory": "project",
+  "framework": null
 }
